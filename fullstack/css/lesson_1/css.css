@@ -1,3 +1,27 @@
+/* 4th style priority */ 
 div {
-    font-size: 25px;
+    font-size: 40px;
+}
+
+/* 3rd style priority */ 
+.large {
+    font-size: 80px;
+}
+
+/* Last one counts */ 
+.large {
+    font-size: 44px;
+}
+
+/* 2nd style priority */ 
+#id3 {
+    font-size: 30px;
+}
+
+.main_div {
+    font-weight: bold;
+}
+
+#id2 {
+    color: blue;
 }
