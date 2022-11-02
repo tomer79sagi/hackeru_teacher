@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // Conditions
+            // 1. if-then-else
+            var age = prompt("Please enter your age");
+            
+            if (age < 40) {
+                document.write('young');
+            } else {
+                document.write('old');
+            }
+
+            // 2. Logical operators | result = boolean (type)
+            // TEST 1: both variables are numbers
+            var age = 35;
+            var second_age = 35;
+
+            // If age = second_age
+            document.write(age == second_age); // value-based comparison (ignoring type) ==> TRUE
+            document.write("<br/>");
+            document.write(age === second_age); // compare value & type ==> TRUE
+
+            // TEST 2: One is string and the other number
+            var age = "35"; // string
+            var second_age = 35; // number
+
+            // If age = second_age
+            document.write("<br/>");
+            document.write(age == second_age); // value-based comparison (ignoring type) ==> TRUE
+            document.write("<br/>");
+            document.write(age === second_age); // compare value & type ==> FALSE
+        </script>
+
+    </body>
+</html>
