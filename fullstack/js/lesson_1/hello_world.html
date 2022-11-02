@@ -5,22 +5,52 @@
     <body>
         <script>
             // Product
-            // var price = 35;
-            var type = "Mobile Phone";
-            var brand = "Samsung";
-            var model = "S22 Plus";
-            var is_available = false;
+            // var price = 35; // number
+            var type = "Mobile Phone"; // string
+            var brand = "Samsung"; // string
+            var model = "S22 Plus"; // string
+            var is_available = false; // boolean
 
-            var price = prompt("Please enter a price"); // Input
+
+            // var price = prompt("Please enter a price"); // string
+
+            // What can we do with variables?
+            // 1. STRING - Concatenate (שרשור)
+            document.write(type + " " + brand); // ==> "Mobile Phone Samsung"
+
+            // 2. NUMBER - MATH operations
+            var price = 35;
+            var discount = 20;
+            var bonus = 45;
+            var total_price = price + discount - bonus; // numbers
+
+            // 3. COMBINATION of STRINGS and NUMBERS
+            
+
+
+
+
+
+            var price_number = parseInt(price);
+            var price_with_vat = price * 1.17;
+            var price_with_discount = price - 40;
+
+            document.write("Price plus 50: " + price + 50 + "<br/>"); // "35" + 50 ==> "3550"
+            document.write("Price plus 50 as number: " + (price_number + 50) + "<br/>"); // number
+
+            document.write("price: " + typeof price + "<br/>");
+            document.write("price_number: " + typeof price_number + "<br/>"); // number
+            document.write("price_with_vat: " + typeof price_with_vat + "<br/>");
+            document.write("price_with_discount: " + typeof price_with_discount + "<br/>");
 
             // Output 1 - HTML Page
-            document.write(type + " " + brand); // Output --> document.write("Mobile Phone Samsung");
+            document.write(type + " " + brand + " " + is_available + " " + price_with_vat + "<br/>"); // Output --> document.write("Mobile Phone Samsung");
 
             // Output 2 - Browser's console
             console.log("This phone is available? " + is_available);
 
             // Output 3 - Browser's alert (push notification)
-            alert("The price is: " + price);
+            // alert("The price is: " + price);
         </script>
 
     </body>
