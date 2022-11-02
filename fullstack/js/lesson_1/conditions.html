@@ -6,10 +6,12 @@
         <script>
             // Conditions
             // 1. if-then-else
-            var age = prompt("Please enter your age");
+            var age = +prompt("Please enter your age");
             
-            if (+age < 40) {
+            if (age < 40) {
                 document.write('young');
+            } else if (age < 50) {
+                document.write('mature');
             } else {
                 document.write('old');
             }
