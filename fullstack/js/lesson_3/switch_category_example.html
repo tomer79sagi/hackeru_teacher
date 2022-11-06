@@ -3,8 +3,13 @@
         <script>
             var category = prompt("Type in your category");
 
+            // LOC - Lines of Code must be as small as possible, while being able to read, understand and extend the code
+            // if ((category === "A" || category === "a" || category === "z") || category === "B" || category === "C") {}
+
             switch (category) {
-                case "A":
+                case "A": // ==> if (category === "A");
+                case "a":
+                case "z":
                     document.write("Category A");
                     // No 'break' statement, therefore, continunes to the next cases until it finds a 'break' statement
                 case "B":
@@ -16,6 +21,8 @@
                 case "D":
                     document.write("Category B");
                     break;
+                default: // like 'else' in the 'if-then-else' statement ==> else {}
+                    document.write("Other");
             }
         </script>
     </body>
