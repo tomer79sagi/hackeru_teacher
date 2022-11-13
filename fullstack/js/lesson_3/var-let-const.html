@@ -1,0 +1,28 @@
+<html>
+
+    <body>
+        <script>
+            var a = 5; // variable
+            let age = 23;
+            const c = 9; // Cannot change after assignment
+
+            var a = "Tomer"; // Re-declerable
+            // c = 8; // Cannot re-assign
+            a = age = "Sagi" // Re-assignable
+            age = "Jeff";
+            // let age = 55; // NOT Re-declerable
+
+            const g = +prompt("Enter a number"); // NaN if prompt is a string
+
+            if (g < 5) {
+                let k = "Tomer";
+                document.write(a); // WORKS
+            } else {
+                let o = "Sagi";
+            }
+
+            document.write(k); // THROWS ERROR
+        </script>
+
+    </body>
+</html>
