@@ -9,8 +9,12 @@ function findElementById() {
 
 function findTags() {
      // Retrieve the <p> element as HTMLElement object
-     const objects = document.getElementsByTagName("div");
+     const array = document.getElementsByTagName("div");
+
+     for (let i=0 ; i<array.length ; i++) {
+        array[i].innerHTML = i;
+     }
 
      // Update the 'innerHTML' property
-     p_element_object.innerHTML = "Tomer Sagi";
+    //  p_element_object.innerHTML = "Tomer Sagi";
 }
