@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script>
+        function ex14WhyWorking() {
+            // 1. Define HTML code to re-use
+            // 2. Create HTML element as object to later append to document.body
+            // 3. Set the new element's HTML content (use 'innerHTML' and set the content defined in step 1)
+            // 4. Add new object to the 'circle' div (the object created in step 2)
+
+
+            // 1. Define HTML code to re-use 
+            let a = 'task';
+
+            // Adding variables to multi-line strings using ${variable}
+            let task_html = `
+                <div class="${a}">
+                    Tomer Sagi
+                </div>
+                <div>
+                    February 11th
+                </div>
+                `;
+
+            // 2. Create HTML element as object to later append to document.body
+            let task_obj = document.createElement("div");
+
+            // 3. Set the new element's HTML content
+            task_obj.innerHTML = task_html;
+            // task_obj.onclick = funcX; // Assign event handlers
+            // task_obj.onmouseover = funcY; // Assign additional handlers
+
+            // 4. Add new object to the 'circle' div
+            circle.appendChild(task_obj);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="circle" onclick="ex14WhyWorking()" style="position: absolute; font-size: 14px;">@</div>
+</body>
+
+</html>
