@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        // 'Task' is a class, a template of objects of the same type
+        class Task {
+            description = "";
+
+            add() {
+                alert('Tomer');
+            }
+        }
+
+        const task_1 = new Task(); // ==> task_1 is an 'object' of type 'Task' the class.
+        task_1.description = "Tomer";
+        task_1.add();
+
+
+        // Objects are TOO flexible and could create many bugs and errors
+        const task_obj = {
+            first_name: "Tomer",
+            add: function() {
+                alert('tomer');
+            },
+            xx: "Go"
+        }
+
+        const task_2 = {
+            first_name: "John",
+            add: function() {
+                alert('tomer');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="circle" style="position: absolute; font-size: 50px;">@</div>
+</body>
+
+</html>
