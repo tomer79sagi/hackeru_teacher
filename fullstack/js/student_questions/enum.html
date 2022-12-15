@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        // 1. Classical enum in JS
+        const ProcessStatus = {
+            STARTED: 1,
+            IN_PROGRESS: 2,
+            FINISHED: 3
+        }
+
+        // 2. ES6 capability, disabling the ability to change the properties
+        const TaskStatus = Object.freeze({
+            STARTED: 1,
+            IN_PROGRESS: 2,
+            FINISHED: 3
+        });
+    </script>
+</head>
+
+<body>
+    <div id="circle" style="position: absolute; font-size: 50px;">@</div>
+</body>
+
+</html>
