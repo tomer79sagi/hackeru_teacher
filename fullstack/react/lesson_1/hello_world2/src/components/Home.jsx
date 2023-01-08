@@ -1,17 +1,18 @@
 import { Component } from 'react';
-import PageHeader from './PageHeader';
 import './Home.css';
 
 class Home extends Component {
 
-    state = { 
-        full_name: "Tomer Sagi",
-        phone_number: "0528684411",
-        email: "me@tomersagi.com"
-    }
-
     myStyles = {
         backgroundColor: "green"
+    }
+
+    constructor(props) {
+        this.state = { 
+            full_name: "Tomer Sagi",
+            phone_number: "0528684411",
+            email: "me@tomersagi.com"
+        }   
     }
 
     getName() {
@@ -29,7 +30,6 @@ class Home extends Component {
     render() { 
         return (
             <div>
-                <PageHeader/>
                 <div style={ this.myStyles }>{ this.state.full_name }</div>
                 <div style={ {backgroundColor: "orange"} }>{ this.getName() }</div>
             </div>

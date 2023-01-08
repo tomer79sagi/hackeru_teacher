@@ -1,11 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.holy-grail {
+  display: flex;
+  flex-direction: column;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.holy-grail__left {
+  width: 25%;
+}
+
+.holy-grail__middle {
+  /* Take the remaining width */
+  flex-grow: 1;
+}
+
+.holy-grail__right {
+  width: 20%;
 }
