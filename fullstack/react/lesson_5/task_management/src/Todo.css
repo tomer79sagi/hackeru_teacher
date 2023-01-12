@@ -1,0 +1,30 @@
+.todo_list {
+    font-size: 1.2em;
+    margin: auto;
+    width: 70%;
+    line-height: 2.5em;
+}
+
+.todo_add {
+    height: 5vh;
+}
+
+.todo_item {
+    width: 40%;
+    text-align: left;
+    display: inline-block;
+}
+
+.todo_actions {
+    width: 30%;
+    text-align: middle;
+    display: inline-block;
+}
+
+.todo_actions > button {
+    font-size: 0.8em;
+}
+
+li {
+    list-style-type: none;
+}

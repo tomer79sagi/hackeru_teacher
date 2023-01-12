@@ -1,7 +1,6 @@
-import Clock from "./components/__clock";
-import Home from "./components/Home";
 import PageHeader from "./components/PageHeader";
 import PageMain from "./components/PageMain";
+import PageFooter from "./components/PageFooter";
 
 function App() {
 
@@ -9,7 +8,7 @@ function App() {
     <div className="holy-grail">
         <PageHeader/>
         <PageMain/>
-        <footer>FOOTER</footer>
+        <PageFooter/>
     </div>
   );
 }
