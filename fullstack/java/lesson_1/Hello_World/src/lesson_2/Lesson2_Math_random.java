@@ -1,3 +1,5 @@
+package lesson_2;
+
 public class Lesson2_Math_random {
     public static void main(String[] args) {
         // ==> Math.random() - 0 > 0.999999 | * 101 => 0 - 100.9999999

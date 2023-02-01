@@ -1,3 +1,5 @@
+package lesson_2;
+
 public class Lesson2_Loops_while {
     public static void main(String[] args) {
 
