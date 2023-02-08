@@ -1,6 +1,7 @@
 package lesson_4;
 
 public class Array_Strings {
+    // Receive a String, iterate over each character and print the character and its ASCII value
     public static void main(String[] args) {
         String name = "Tomer Sagi";
 
