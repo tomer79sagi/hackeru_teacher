@@ -24,7 +24,7 @@ public class Dog {
     public Dog(String name) {
         this.name = name;
 
-        this.weight = doX();
+//        this.weight = doX();
     }
 
     public static void printKnownBreeds() {
