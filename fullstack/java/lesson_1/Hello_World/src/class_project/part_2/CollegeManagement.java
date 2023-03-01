@@ -2,6 +2,7 @@ package class_project.part_2;
 
 import java.util.Arrays;
 
+// Manage the college, Students, Teachers, Classes
 public class CollegeManagement {
     static Student[] students = new Student[0];
 
