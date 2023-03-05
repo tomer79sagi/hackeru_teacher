@@ -1,4 +1,4 @@
-package class_project.part_2;
+package com.microsoft.collegemanagement.util;
 
 import java.util.Scanner;
 

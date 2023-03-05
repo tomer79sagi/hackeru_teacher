@@ -1,7 +1,8 @@
-package class_project.part_4;
+package class_project.part_5.student;
+
+import class_project.part_5.util.IO;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StudentManagement {

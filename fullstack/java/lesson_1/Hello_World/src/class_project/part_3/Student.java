@@ -1,4 +1,4 @@
-package class_project.part_2;
+package class_project.part_3;
 
 public class Student {
     String name;
@@ -11,6 +11,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student name: " + this.name +"\n" +"Student age: " + this.age + "\n -----------";
+        return "Student: " + this.name +" (" + this.age + ")";
     }
 }
