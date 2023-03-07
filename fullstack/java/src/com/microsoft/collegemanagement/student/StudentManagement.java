@@ -1,7 +1,8 @@
-package class_project.part_4;
+package com.microsoft.collegemanagement.student;
+
+import com.microsoft.collegemanagement.util.IO;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StudentManagement {

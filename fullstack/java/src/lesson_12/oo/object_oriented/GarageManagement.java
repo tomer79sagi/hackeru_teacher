@@ -2,7 +2,6 @@ package lesson_12.oo.object_oriented;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class GarageManagement {
     public static void main(String[] args) {

@@ -1,8 +1,7 @@
-package class_project.part_5;
+package com.microsoft.collegemanagement;
 
-import class_project.part_5.student.StudentManagement;
-import class_project.part_5.student.StudentProspect;
-import class_project.part_5.util.IO;
+import com.microsoft.collegemanagement.student.StudentManagement;
+import com.microsoft.collegemanagement.student.StudentProspect;
 
 // Manage the college, Students, Teachers, Classes
 public class CollegeManagement {
