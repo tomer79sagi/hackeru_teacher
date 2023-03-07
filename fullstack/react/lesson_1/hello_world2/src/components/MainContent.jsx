@@ -52,13 +52,18 @@ class MainContent extends Component {
 
         // 1. Find the book with the provided ISBN and remove it from the 'this.state.books'
         this.setState({
-            books: this.state.books.filter(book => book.isbn !== arguments[0])
+            // FILTER returns a BOOLEAN value - if TRUE, it's included in the new array
+            books: this.state.books.filter(book => {
+                return book.isbn !== arguments[0]
+            })
         })
     }
 
     onEditHandle() {
         // 1. Find book by book isbn (I received it in 'arguments[0]')
-        const book = this.state.books.find(book => book.isbn === arguments[0]);
+        const book = this.state.books.find(book => {
+            return book.isbn === arguments[0]
+        });
 
         // 2. Update the 'editBook' property in 'this.state' to contain the extracted details for editing
         this.setState({
@@ -78,12 +83,10 @@ class MainContent extends Component {
             isEdit: false,
             books: this.state.books.map(book => {
                 // If the isbn of the book in the current iteration EQUALS the 'isbn' in the 'this.state.editBook'
-                if (book.isbn === this.state.editBook.isbn) {
+                if (book.isbn === this.state.editBook.isbn)
                     book.name = event.target.frm_book_name.value;
-                    return book;
-                }
         
-                // Return the original book from the array (in the current iteration)
+                // Return the 'book' object
                 return book;
             })
         });
@@ -116,7 +119,8 @@ class MainContent extends Component {
                 }
 
                 <div className="book_list">
-                    { this.state.books.map(book => (
+                    { this.state.books.map(book => {
+                        return (
                             <div className="book_item">
                                 <div>
                                     <span className="book_name">{book.name}</span>
@@ -129,7 +133,9 @@ class MainContent extends Component {
                                 </div>
                             </div>
                         )
-                    ) /* this code creates a new ARRAY and hands it to REACT to display */}
+                    } /* => callback function closing brackets (the right side of the arrow function) */
+                    ) /* The element in each .map() iteration (the left side of the arrow function) */
+                    }
                 </div>
             </article>
         );
