@@ -1,6 +1,6 @@
 package lesson_13.homework_1;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Printable, Sortable {
     String furType;
 
     // Secondary / service constructor
@@ -17,5 +17,14 @@ public class Dog extends Animal {
         // All new dog logic will be here!
         super(name);
         this.furType = furType;
+    }
+
+    public void print() {
+        System.out.println("Printing Dog");
+    }
+
+    @Override
+    public void sort() {
+
     }
 }
