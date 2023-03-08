@@ -6,7 +6,7 @@ public class Zoo {
         Dog dog2 = new Dog("");
         Cat cat = new Cat("Mitsi");
         Cow cow = new Cow("Moomoo");
-//        Animal animal = new Animal();
+        Animal animal = new Animal("Animal");
 
 //        dog.name = "Tzupi";
         dog.setName("Tz");
