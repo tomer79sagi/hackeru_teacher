@@ -3,6 +3,7 @@ package class_project.part_5.student;
 import class_project.part_5.util.IO;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class StudentManagement {
@@ -43,24 +44,24 @@ public class StudentManagement {
                 count();
     }
 
-    List<Student> getOldStudentsAsArray() {
-        return (List<Student>)students.
+    Student[] getOldStudentsAsArray() {
+        return students.
                 stream().
                 filter(s -> s.age > 35).
-                toList();
+                toArray(Student[]::new);
     }
 
-    List<Student> searchStudentsByName() {
+    Student[] searchStudentsByName() {
         System.out.println("Enter text to search by student name :");
         String searchString = IO.nextString();
 
-        return (List<Student>)students.
+        return students.
                 stream().
                 filter(s -> s.name.contains(searchString)).
-                toList();
+                toArray(Student[]::new);
     }
 
-    void mainMenu() {
+    public void mainMenu() {
         mainMenu:
         while (true) {
             System.out.println("""
@@ -100,12 +101,14 @@ public class StudentManagement {
             switch (selection) {
                 case 1 -> System.out.println(getYoungStudentCount());
                 case 2 -> {
-                    List<Student> list = getOldStudentsAsArray();
-                    list.forEach(s -> System.out.println(s));
+                    Student[] olderStudents = getOldStudentsAsArray();
+                    for (Student st : olderStudents)
+                        System.out.println(st);
                 }
                 case 3 -> {
-                    List<Student> list = searchStudentsByName();
-                    list.forEach(s -> System.out.println(s));
+                    Student[] foundStudents = searchStudentsByName();
+                    for (Student st : foundStudents)
+                        System.out.println(st);
                 }
                 case 4 -> { break actionsMenu; }
             }
