@@ -1,9 +1,11 @@
 package lesson_13.homework_1;
 
+import java.util.ArrayList;
+
 public class Zoo {
-    public static <ArrayList> void main(String[] args) {
+    public static void main(String[] args) {
         Dog dog = new Dog("Apchi", "Long");
-        Dog dog2 = new Dog("");
+        Dog dog2 = new Dog("Chippy");
         Cat cat = new Cat("Mitsi");
         Cow cow = new Cow("Moomoo");
         Animal animal = new Animal("Animal");
@@ -11,11 +13,7 @@ public class Zoo {
         Person person = new Person();
 
 //        dog.name = "Tzupi";
-        dog.setName("Tz");
-
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(cow);
+        dog.setName("Tzupi");
 
         person.print();
         dog.print();
@@ -23,9 +21,15 @@ public class Zoo {
         person.sort();
         dog.sort();
 
-//        ArrayList printables = new ArrayList<>();
-//        printables.add(dog);
-//        printables.add(person);
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(dog);
+        animals.add(dog2);
+        animals.add(cat);
+        animals.add(cow);
 
+        animals.
+                stream().
+                filter(a -> a instanceof Cat).
+                forEach(a -> System.out.println(a));
     }
 }

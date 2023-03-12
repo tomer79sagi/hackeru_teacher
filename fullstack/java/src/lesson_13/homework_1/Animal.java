@@ -21,4 +21,8 @@ public class Animal {
     void makeSound() {
         System.out.println("Making sound");
     }
+
+    public String toString() {
+        return "Animal name: " + name;
+    }
 }
