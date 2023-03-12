@@ -4,6 +4,7 @@ import lesson_14.interfaces.zoo.animal.Animal;
 import lesson_14.interfaces.zoo.animal.Cat;
 import lesson_14.interfaces.zoo.animal.Cow;
 import lesson_14.interfaces.zoo.animal.Dog;
+import lesson_14.interfaces.zoo.facility.Cage;
 import lesson_14.interfaces.zoo.person.Person;
 import lesson_14.interfaces.zoo.report.IReport;
 import lesson_14.interfaces.zoo.report.Printable;
@@ -17,9 +18,10 @@ public class Zoo {
         Cat cat = new Cat("Mitsi");
         Cow cow = new Cow("Moomoo");
 
-        Person person = new Person();
-
         dog.setName("Tzupi");
+
+        Person person = new Person();
+        Cage cage = new Cage();
 
         ArrayList<Printable> printables = new ArrayList<>();
         printables.add(dog);
@@ -27,6 +29,7 @@ public class Zoo {
         printables.add(cat);
         printables.add(cow);
         printables.add(person);
+        printables.add(cage);
 
         // As a developer that is responsbile for ONLY printing, I don't need or WANT to know about the details
         // of a 'Person' class or 'Animal' class
