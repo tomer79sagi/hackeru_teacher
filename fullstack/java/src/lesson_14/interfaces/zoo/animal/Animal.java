@@ -1,10 +1,9 @@
 package lesson_14.interfaces.zoo.animal;
 
-import lesson_14.interfaces.zoo.report.IReport;
-import lesson_14.interfaces.zoo.report.Printable;
+import lesson_14.interfaces.zoo.report.IOutput;
 
 public abstract class Animal
-        implements Printable, IReport {
+        implements IOutput {
     private String name;
 
     public Animal(String name) {

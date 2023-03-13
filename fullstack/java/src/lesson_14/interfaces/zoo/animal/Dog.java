@@ -37,4 +37,8 @@ public class Dog
     public void print() {
         System.out.println("Printing Dog");
     }
+
+    public String getFurType() {
+        return furType;
+    }
 }

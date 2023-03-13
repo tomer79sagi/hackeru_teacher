@@ -1,10 +1,9 @@
 package lesson_14.interfaces.zoo.facility;
 
-import lesson_14.interfaces.zoo.report.IReport;
-import lesson_14.interfaces.zoo.report.Printable;
+import lesson_14.interfaces.zoo.report.IOutput;
 
 public class Cage
-    implements IReport, Printable {
+    implements IOutput {
 
     public Cage() {
     }

@@ -38,11 +38,11 @@ public class Zoo {
 //        animals.forEach(a -> a.makeSound());
 
         // Second question
-        animals.forEach(a -> System.out.println(a));
-        animals.forEach(a -> a.makeSound());
+        animals.forEach(System.out::println);
+        animals.forEach(Animal::makeSound);
         animals.
                 stream().
                 filter(a -> a instanceof Dog).
-                forEach(a -> System.out.println(a));
+                forEach(System.out::println);
     }
 }
