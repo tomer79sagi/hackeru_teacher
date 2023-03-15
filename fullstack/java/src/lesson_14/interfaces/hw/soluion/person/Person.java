@@ -1,7 +1,7 @@
-package lesson_15.interfaces.hw.soluion.person;
+package lesson_14.interfaces.hw.soluion.person;
 
-import lesson_15.interfaces.hw.soluion.db.IDB;
-import lesson_15.interfaces.hw.soluion.report.Printable;
+import lesson_14.interfaces.hw.soluion.db.IDB;
+import lesson_14.interfaces.hw.soluion.report.Printable;
 
 public class Person
         implements Printable, IDB {

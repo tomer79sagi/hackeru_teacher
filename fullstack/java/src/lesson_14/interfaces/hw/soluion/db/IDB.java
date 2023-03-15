@@ -1,4 +1,4 @@
-package lesson_15.interfaces.hw.soluion.db;
+package lesson_14.interfaces.hw.soluion.db;
 
 public interface IDB {
     String serverName = "MongoDB";

@@ -1,4 +1,4 @@
-package lesson_15.interfaces.hw.soluion.report;
+package lesson_14.interfaces.hw.soluion.report;
 public interface Printable {
 
     public final static String PRINTER_NAME = "HP LaserJet";

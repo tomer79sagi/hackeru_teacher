@@ -1,4 +1,4 @@
-package lesson_15.interfaces.hw.soluion.animal;
+package lesson_14.interfaces.hw.soluion.animal;
 
 public class Dog
         extends Animal {

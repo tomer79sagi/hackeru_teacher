@@ -1,15 +1,14 @@
-package lesson_15.interfaces.hw.soluion;
+package lesson_14.interfaces.hw.soluion;
 
-import lesson_15.interfaces.hw.soluion.animal.Animal;
-import lesson_15.interfaces.hw.soluion.animal.Cat;
-import lesson_15.interfaces.hw.soluion.db.IDB;
-import lesson_15.interfaces.hw.soluion.person.Person;
-import lesson_15.interfaces.hw.soluion.report.IOutput;
-import lesson_15.interfaces.hw.soluion.report.IReport;
-import lesson_15.interfaces.hw.soluion.report.Printable;
-import lesson_15.interfaces.hw.soluion.animal.Cow;
-import lesson_15.interfaces.hw.soluion.animal.Dog;
-import lesson_15.interfaces.hw.soluion.facility.Cage;
+import lesson_14.interfaces.hw.soluion.animal.Cat;
+import lesson_14.interfaces.hw.soluion.animal.Cow;
+import lesson_14.interfaces.hw.soluion.db.IDB;
+import lesson_14.interfaces.hw.soluion.facility.Cage;
+import lesson_14.interfaces.hw.soluion.person.Person;
+import lesson_14.interfaces.hw.soluion.report.IOutput;
+import lesson_14.interfaces.hw.soluion.report.IReport;
+import lesson_14.interfaces.hw.soluion.report.Printable;
+import lesson_14.interfaces.hw.soluion.animal.Dog;
 
 import java.util.ArrayList;
 

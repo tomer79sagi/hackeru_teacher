@@ -1,6 +1,6 @@
-package lesson_15.interfaces.hw.soluion.facility;
+package lesson_14.interfaces.hw.soluion.facility;
 
-import lesson_15.interfaces.hw.soluion.report.IOutput;
+import lesson_14.interfaces.hw.soluion.report.IOutput;
 
 public class Cage
     implements IOutput {

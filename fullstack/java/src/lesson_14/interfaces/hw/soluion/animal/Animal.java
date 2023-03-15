@@ -1,7 +1,7 @@
-package lesson_15.interfaces.hw.soluion.animal;
+package lesson_14.interfaces.hw.soluion.animal;
 
-import lesson_15.interfaces.hw.soluion.db.IDB;
-import lesson_15.interfaces.hw.soluion.report.IOutput;
+import lesson_14.interfaces.hw.soluion.db.IDB;
+import lesson_14.interfaces.hw.soluion.report.IOutput;
 
 public abstract class Animal
         implements IOutput, IDB {
