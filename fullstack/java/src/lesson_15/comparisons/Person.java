@@ -5,8 +5,14 @@ import lesson_14.homework.zoo.report.Printable;
 
 public class Person {
     private String name;
+    private int id;
 
-    public Person(String name) {
+    public Person(int id) {
+        this(id, null);
+    }
+
+    public Person(int id, String name) {
+        setId(id);
         setName(name);
     }
 
@@ -32,5 +38,25 @@ public class Person {
 
         // *. Last check to perform
         return getName().equals(objPerson.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        final int PRIME = 31;
+        int result = 1;
+
+        // Must match the 'equals()'
+        result = PRIME * result + getId();
+        result = PRIME * result + getName().hashCode();
+
+        return result;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

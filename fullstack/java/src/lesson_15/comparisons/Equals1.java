@@ -1,19 +1,35 @@
 package lesson_15.comparisons;
 
 import java.util.HashSet;
+import java.util.Hashtable;
 
 public class Equals1 {
     public static void main(String[] args) {
 //        test1();
 //        test2();
         test3();
+//        test4();
     }
 
-    // Testing Hash
+    private static void test4() {
+        Hashtable<Integer, Student> studentMap = new Hashtable<>();
+
+        studentMap.put(444444, new Student(444444, "Tomer"));
+        studentMap.put(77777, new Student(77777, "John"));
+        studentMap.put(4545343, new Student(4545343, "Shimon"));
+        studentMap.put(55555, new Student(342342, "Eitan"));
+        studentMap.put(342342, new Student(342342, "XXXX"));
+
+        for (Integer key: studentMap.keySet()) {
+            System.out.println(key + "\t" + key.hashCode() + "\t" + studentMap.get(key).getName());
+        }
+    }
+
+    // Testing Hash and the problem of duplicates in HashSet
     private static void test3() {
         // equals()
-        Person tomer = new Person("Tomer");
-        Person tomer2 = new Person("Tomer");
+        Person tomer = new Person(4444, "Tomer");
+        Person tomer2 = new Person(4444, "Sagi");
 
         System.out.println(tomer.equals(tomer2));
 
@@ -21,6 +37,8 @@ public class Equals1 {
         HashSet<String> hashS = new HashSet<>();
         hashS.add("Tomer");
         hashS.add("Tomer");
+
+        System.out.println("Tomer".hashCode());
         System.out.println(hashS);
 
         // HashSet of Integer
@@ -34,12 +52,14 @@ public class Equals1 {
         HashSet<Person> hash = new HashSet<>();
         hash.add(tomer);
         hash.add(tomer2);
+        System.out.println(tomer.hashCode());
+        System.out.println(tomer2.hashCode());
         System.out.println(hash);
     }
 
     private static void test2() {
         // Check against 'null' value
-        Person tomer = new Person("Tomer");
+        Person tomer = new Person(4444, "Tomer");
         Person john = tomer;
         Person tomer2 = null;
         String str = "Tomer";
@@ -50,8 +70,8 @@ public class Equals1 {
     }
 
     private static void test1() {
-        Person tomer = new Person("Tomer");
-        Person tomer2 = new Person("Tomer");
+        Person tomer = new Person(4444, "Tomer");
+        Person tomer2 = new Person(4444, "Tomer");
         Person john = tomer; // Assigns 'tomer's memory address to 'john'
 
 //        System.out.println(tomer.getClass());
