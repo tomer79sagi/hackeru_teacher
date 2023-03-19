@@ -1,4 +1,4 @@
-package lesson_15;
+package lesson_x;
 
 public class Hash {
     public static void main(String[] args) {
