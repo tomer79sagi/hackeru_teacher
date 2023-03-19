@@ -22,7 +22,10 @@ public class Main {
             System.out.println(p);
         }
 
-        // Sort using a firstName comparator
+        // Sort by the default 'compareTo()' method (exists in Comparable)
+//        Collections.sort(family);
+
+        // Sort using a firstName comparator ('compare' method exists in Comparator)
         Collections.sort(family, new FirstNameComparator());
 
         System.out.println("\nSorted by 'FirstNameComparator':");

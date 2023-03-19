@@ -1,7 +1,7 @@
 package lesson_16.comparable_generics;
 
 public class Book
-        implements Comparable {
+        implements Comparable<Book> {
     private int ISBN;
     private String name;
     private String authorName;
@@ -64,16 +64,10 @@ public class Book
     }
 
     @Override
-    public int compareTo(Object o) {
-        if (o instanceof Book book) {
-//            Book book = (Book)o;
-            int diff = getName().compareTo(book.getName());
+    public int compareTo(Book book) {
+        int diff = getName().compareTo(book.getName());
 
-            System.out.println(getName() + " | " + book.getName() + " | " + diff);
-            return diff;
-        }
-
-        // If not the same instance, generate exception
-        throw new RuntimeException("Can't compare Book to class '" + o.getClass().getSimpleName() + "'");
+        System.out.println(getName() + " | " + book.getName() + " | " + diff);
+        return diff;
     }
 }
