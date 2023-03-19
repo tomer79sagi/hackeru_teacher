@@ -25,7 +25,7 @@ public class Main {
 
         // Sort using a firstName comparator
         Comparator<Person> compare1 = (person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName());
-        family.stream().
+//        family.stream().
         Collections.sort(family, compare1);
         System.out.println("\nSorted by 'FirstNameComparator':\n" + family);
 
