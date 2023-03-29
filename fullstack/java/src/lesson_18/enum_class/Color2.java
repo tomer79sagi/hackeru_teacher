@@ -1,4 +1,4 @@
-package lesson_18;
+package lesson_18.enum_class;
 
 public enum Color2 {
     RED("Red"),

@@ -8,11 +8,6 @@ public class Person1 {
     Person1(String name) {
         this.name = name;
     }
-
-    // Copy constructor
-    Person1(Person1 p) {
-        this.name = p.name;
-    }
     public static void main(String[] args) {
         Person1 p = new Person1("Michael Jordan");
 //        p = new Person1("Magic Johnson"); // Creates a new object in memory

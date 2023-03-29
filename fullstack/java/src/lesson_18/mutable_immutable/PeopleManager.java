@@ -11,6 +11,19 @@ public class PeopleManager {
 
     public PeopleManager() {}
     public static void main(String[] args) {
+//        test1();
+        test2();
+    }
+
+    private static void test2() {
+        Person2 p = new Person2("Tomer"); // Person2 is MUTABLE
+        Ticket t = new Ticket(p); // Ticket is IMMUTABLE
+
+        Person2 p2 = t.getPerson(); // This is now using the copy constructor to get a new reference of Person2
+        p2.setName("Sagi"); // This would NOT change the original name
+    }
+
+    private static void test1() {
         // 1. Create a new instance of the 'immutable' PeopleManager
         PeopleManager pManager = new PeopleManager();
 
@@ -32,10 +45,6 @@ public class PeopleManager {
         // 6. Print 'pManager.getPeople()' -> we see that this was ALSO updated, BAD NEWS
         System.out.println("\nThe original ArrayList");
         pManager.getPeople().forEach(System.out::println);
-
-        // 7. Make sure our Person object is immutable by using the copy constructor
-        Person1 p = new Person1("Tomer");
-        Person1 p2 = new Person1(p);
     }
 
     public List<Person1> getPeople() {
