@@ -1,4 +1,4 @@
-package lesson_18.mutable_immutable;
+package lesson_19.mutable_immutable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,8 @@ public class PeopleManager {
 
     public PeopleManager() {}
     public static void main(String[] args) {
-//        test1();
-        test2();
-
-        ArrayList<Person1> l = new ArrayList<>();
-        l.add(new Person1("John"));
-        l.add(new Person1("Mike"));
+        test1();
+//        test2();
     }
 
     private static void test2() {
