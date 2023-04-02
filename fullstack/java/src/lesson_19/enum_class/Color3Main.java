@@ -23,8 +23,14 @@ public class Color3Main {
 
         // 3. Using 'valueOf()'
         System.out.println("\n> Create Color object from value");
-        Color3Enum c2 = Color3Enum.valueOf("red".toUpperCase());
+        Color3Enum c2 = Color3Enum.valueOf("RED"); // Searches all enum constants for a constant named "RED"
         System.out.println(c2);
+
+        // 4. Implement our own search function for the Enum class, it will be static
+        // so we can access it without initializing the Enum class -> utility method
+        System.out.println("\n> Search the Enum using our own method");
+        Color3Enum c3 = Color3Enum.fromStringV1("Red");
+        System.out.println(c3);
     }
 }
 

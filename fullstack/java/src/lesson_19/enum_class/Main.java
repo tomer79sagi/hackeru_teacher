@@ -1,5 +1,6 @@
 package lesson_19.enum_class;
 
+import java.time.DayOfWeek;
 import java.util.Arrays;
 
 public class Main {
@@ -10,7 +11,21 @@ public class Main {
 
     public static void main(String[] args) {
 //        test1();
-        test2();
+//        test2();
+//        test3();
+    }
+
+    // Using Status.enum
+    private static void test4() {
+        System.out.println(Status.Name.CREATED);
+
+        Status status = new Status();
+    }
+
+    private static void test3() {
+        for (DayOfWeek dw : DayOfWeek.values()) {
+            System.out.println(dw);
+        }
     }
 
     private static void test2() {
@@ -18,9 +33,17 @@ public class Main {
         System.out.println(Color.BLUE);
         System.out.println(Color.GREEN);
 
-        // Arrays.stream(Array[]) -> Creates 'stream()' from Array
-        Arrays.stream(Color.values()).
-                forEach(c -> System.out.println(c));
+        System.out.println("Iterate over Enum");
+
+        // New concepts: ***
+        // 1. Arrays.stream(Array[]) -> Creates 'stream()' from Array
+        // 2. {enum}.values() -> Returns an Array of the enum attributes.
+        Color[] colorArr = Color.values();
+
+        Arrays.stream(colorArr).forEach(c -> System.out.println(c));
+//        for (Color c : colorArr) {
+//            System.out.println(c);
+//        }
     }
 
     private static void test1() {
