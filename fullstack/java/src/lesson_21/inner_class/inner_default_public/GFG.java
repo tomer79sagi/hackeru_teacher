@@ -2,6 +2,7 @@ package lesson_21.inner_class.inner_default_public;
 
 // Class 2
 // Main class
+// INNER is public/default
 class GFG {
 
     // Main driver method
