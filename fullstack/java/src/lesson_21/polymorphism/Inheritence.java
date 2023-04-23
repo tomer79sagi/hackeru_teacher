@@ -11,7 +11,7 @@ public class Inheritence {
 //        List<Integer> l = new ArrayList<Integer>(List.of(1,2,3));
 //        List<Number> l = new ArrayList<>(List.of(0.4f,0.4f,0.4f));
         List<Float> l = new ArrayList<>(List.of(0.4f,0.4f,0.4f)); // Conflicts with the lower bounds
-        fillNumbers(l);
+//        fillNumbers(l);
     }
 
     public static <T extends Number> void print(List<T> numbers) {
