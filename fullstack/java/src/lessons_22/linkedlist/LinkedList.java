@@ -8,14 +8,26 @@ public class LinkedList<T> {
     private boolean isEmpty() {
         return head == null;
     }
+    
+    // 'Builder' design pattern
+    // 1. Create new Node, list is empty, set head & last, return indicator that no further action is required (return null)
+    // 2. Create new Node, list is NOT empty, return the Node
+    private Node<T> createNode(T value) {
+        Node<T> n = new Node<>(value);
+
+        if (isEmpty()) {
+            head = last = n; // Logic already exists. Need to find a solution for re-use
+            return null;
+        }
+
+        return n;
+    }
 
     // Method to add an element to the start of the chain
     public void prepend(T value) {
-        Node<T> n = new Node(value);
+        Node<T> n = createNode(value);
 
-        if (isEmpty())
-            head = last = n; // Logic already exists. Need to find a solution for re-use
-        else {
+        if (n != null) {
             // Change 'head' to be second temporarily and 'n' to be first
             n.next = head;
 
@@ -26,12 +38,46 @@ public class LinkedList<T> {
         size++;
     }
 
-    public void add(T value) {
-        Node<T> n = new Node(value);
+    // Example: LinkedList with 3 elements, index = 2
+    public void add(int index, T value) {
+        // 1. Check for exceptions
+        if (index > size || index < 1)
+            throw new ArrayIndexOutOfBoundsException();
 
-        if (isEmpty())
-            head = last = n;
-        else {
+        // Index is valid
+        // 2. Trying to add at the start, use 'prepend()'
+        if (index == 1) {
+            prepend(value);
+            return;
+        // 3. Trying to add as the last element, use 'add()'
+        } else if (index == size) {
+            add(value);
+            return;
+        }
+
+        // 4. Add somewhere in the middle of the LinkedList
+        Node<T> n = createNode(value);
+        if (n != null) {
+            Node<T> cNode = head;
+            for (int i = 1; i < index - 1 ; i++) {
+                cNode = cNode.next;
+            }
+
+            // cNode = Node at the index to be replaced
+            // the 'next' of the new Node => next of the one before the 'index'
+            n.next = cNode.next;
+
+            // The 'next' of the one before the index => new Node
+            cNode.next = n;
+        }
+
+        size++;
+    }
+
+    public void add(T value) {
+        Node<T> n = createNode(value);
+
+        if (n != null) {
             // Attach the new one after the last one
             last.next = n;
 
@@ -48,7 +94,7 @@ public class LinkedList<T> {
 
         Node<T> cNode = head;
         while (cNode != null) {
-            s += " : " + cNode.toString();
+            s += " : " + cNode;
             cNode = cNode.next;
         }
 

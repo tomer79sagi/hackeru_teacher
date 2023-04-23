@@ -13,6 +13,10 @@ public class Main {
         course.add("Hashtable");
         course.prepend("Inheritence");
 
+        course.add(5, "Threads"); // Add Threads to the end
+        course.add(3, "Inner Class"); // Add after 'Collections' and before 'List'
+        course.add(1, "Class"); // Push 'Inheritence' forward
+
         course.print();
 
         System.out.println(course.getSize());
