@@ -17,8 +17,43 @@ public class BST<T extends Comparable<T>> {
             root = newNode;
             return;
         }
+
         //call the recursive func
-//        insert(root, newNode);
+        insert(root, newNode);
+    }
+
+    private void insert(Node<T> root, Node<T> newNode) {
+        if (newNode.value.compareTo(root.value) < 0) {
+            if (root.left == null)
+                root.left = newNode;
+            else
+                insert(root.left, newNode);
+        } else {
+            if (root.right == null)
+                root.right = newNode;
+            else
+                insert(root.right, newNode);
+        }
+    }
+
+    // PreOrder Traversal
+    public void traversePreOrder() {
+        traversePreOrder(root);
+    }
+
+    private void traversePreOrder(Node<T> root) {
+        // 0. Check if root == null, return control if so
+        if (root == null)
+                return;
+
+        // 1. Print the root first (preorder ==> root first, leaves second)
+        System.out.println(root.value);
+
+        // 2. Recursion left
+        traversePreOrder(root.left);
+
+        // 3. Recursion right
+        traversePreOrder(root.right);
     }
 
 //    public boolean search(T value){
