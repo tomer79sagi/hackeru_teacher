@@ -1,4 +1,4 @@
-package lessons_22.linkedlist;
+package lesson_22.linkedlist;
 
 public class LinkedList<T> {
     private Node<T> head; // First
@@ -107,6 +107,26 @@ public class LinkedList<T> {
 
     public int getSize() {
         return size;
+    }
+
+    public T[] toArray() {
+
+        return null;
+    }
+
+    public LinkedList<T> reverse() {
+        // 1. Create LinkedList<T> to hold the new reversed list
+
+        // 2. Convert LinkedList to Array
+        // - Create array of size .getSize()
+        // - 'while' loop over .next() objects that are not null
+        // - Add each element to array
+
+        // 3. Iterate over array from last to first
+        // - Add nodes to the new LinkedList
+
+        // 4. Return new linkedlist
+        return null;
     }
 
     // Node<T> is ONLY used by the LinkedList class to manage the data structure

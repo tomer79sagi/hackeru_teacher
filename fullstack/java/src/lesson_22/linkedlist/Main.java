@@ -1,4 +1,4 @@
-package lessons_22.linkedlist;
+package lesson_22.linkedlist;
 
 public class Main {
 

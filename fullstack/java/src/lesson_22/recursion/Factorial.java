@@ -1,4 +1,4 @@
-package lessons_22.recursion;
+package lesson_22.recursion;
 
 public class Factorial {
 
