@@ -1,4 +1,4 @@
-package lesson_25.h_writing_to_file;
+package lesson_26.hw.io;
 
 import java.io.IOException;
 import java.nio.file.Files;

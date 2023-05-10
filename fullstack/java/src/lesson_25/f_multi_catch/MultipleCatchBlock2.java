@@ -17,6 +17,8 @@ public class MultipleCatchBlock2 {
         {
             System.out.println("ArrayIndexOutOfBounds Exception occurs");
         }
+
+        // TODO: Replace 'Exception' with 'NumberFormatException'
         catch(Exception e)
         {
             System.out.println("Parent Exception occurs");

@@ -9,8 +9,8 @@ public class Circle {
 
     public void setRadius(double radius) {
         if (radius < 0) {
-            throw new NegativeRadiusException();
-//            throw new NegativeRadiusException("Can't take negative numbers");
+//            throw new NegativeRadiusException();
+            throw new NegativeRadiusException("Can't take negative numbers");
         }
         this.radius = radius;
     }

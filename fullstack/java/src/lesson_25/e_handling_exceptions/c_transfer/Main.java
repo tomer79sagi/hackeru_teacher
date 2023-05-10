@@ -1,24 +1,37 @@
 package lesson_25.e_handling_exceptions.c_transfer;
 
+import lesson_25.e_handling_exceptions.b_avoid.IO;
+
 import java.io.IOException;
 
 public class Main {
-    void m() throws IOException {
-        throw new IOException("device error");//checked exception
-    }
+
+    // 2
     void n() throws IOException {
-        m();
+//        try {
+//            throw new IOException();
+//        } catch (IOException e) {
+//            System.out.println("Format exception");
+//        }
+
+        throw new IOException(); // Creates Exception
     }
-    void p(){
-        try {
-            n();
-        } catch(Exception e) {
-            System.out.println("exception handled");
-        }
+
+    // 1
+    void p() throws IOException {
+        n(); // 2
     }
+
+    // 0
     public static void main(String args[]){
         Main obj = new Main();
-        obj.p();
+
+        try {
+            obj.p();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         System.out.println("normal flow...");
     }
 }
