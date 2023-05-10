@@ -8,7 +8,7 @@ import java.util.Set;
 public class SetA {
     public static void main(String[] args) {
         //we are starting with a list:
-        var lst = List.of("one", "two", "three", "three", "three" ,"four", "five", "six");
+        List<String> lst = List.of("one", "two", "three", "three", "three" ,"four", "five", "six");
 
         //we use Sets for its qualities:
         Set<String> set = new HashSet<>();
@@ -17,8 +17,11 @@ public class SetA {
         //[six, four, one, two, three, five]
         set.forEach(System.out::println);
 
-        //done with the exercise, we need a list back:
+        // Creates a copy of the HashSet, used when we want
+        // to make sure a wrapper object doesn't return the pointer to the original HashSet object
         lst = List.copyOf(set);
+
+        // Creates an ArrayList with a 'Collection' object (List or Set)
         lst = new ArrayList<>(set);
         System.out.println(lst);
         //[six, four, one, two, three, five]
